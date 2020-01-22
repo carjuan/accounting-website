@@ -3,6 +3,7 @@
 :root {
   --main-btn-color: #fa5e16;
   --hover-btn-color: #071538;
+  --hover-snd-color: #43588d;
   --text-primary: #071538;
   --bold-font: 700;
   --regular-font: 400;
@@ -47,8 +48,24 @@ h3 {
   transition: background 0.5s;
 }
 
+.btn-white {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: var(--main-btn-color);
+  border: none;
+  color: #f4f4f4;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  transition: background 0.5s;
+}
+
 .btn:hover {
   background: var(--hover-btn-color);
+}
+
+.btn-white:hover {
+  background: var(--hover-snd-color);
+  color: #fff;
 }
 
 .text-primary {
@@ -56,21 +73,68 @@ h3 {
   font-weight: var(--bold-font);
 }
 
+.py-1 {
+  padding: 1.5rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.main-heading {
+  font-size: 4rem;
+}
+
+.main-paragraph {
+  font-size: 1.3rem;
+}
+
 /* navbar */
 
 #navbar {
   border-bottom: #cccccc solid 2px;
-  width: 100vw;
   max-height: 20vh;
   font-size: 1.2rem;
   text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
 }
 
 #navbar .navbar-container {
   display: flex;
   max-width: 80%;
   margin: auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
 }
@@ -94,11 +158,6 @@ h3 {
   margin-left: 0px;
 }
 
-/* #navbar .navbar-container ul li a:hover {
-  border-bottom: 0.3rem solid var(--main-btn-color);
-  border-top: 0.3rem solid var(--main-btn-color);
-} */
-
 #navbar .navbar-container ul li a::before,
 #navbar .navbar-container ul li a::after {
   content: '';
@@ -108,7 +167,7 @@ h3 {
   background-color: crimson;
   left: 0;
   transform: scaleX(0);
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 
 #navbar .navbar-container ul li a::before {
@@ -123,4 +182,21 @@ h3 {
 #navbar .navbar-container ul li a:hover::before,
 #navbar .navbar-container ul li a:hover::after {
   transform: scaleX(1);
+}
+
+/* showcase */
+
+#showcase {
+  background: url(../img/assets/monochrome-photography-of-people-shaking-hands-814544.jpg)
+    no-repeat center center/cover;
+  color: #f4f4f4;
+  height: 100vh;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

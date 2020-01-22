@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+:root {
+  --main-btn-color: #fa5e16;
+  --hover-btn-color: #071538;
+  --text-primary: #071538;
+  --bold-font: 700;
+  --regular-font: 400;
+  --light-font: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+h1,
+h2,
+h3 {
+  padding-bottom: 1.2rem;
+}
+
+/* Utility classes */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: var(--main-btn-color);
+  border: none;
+  color: #f4f4f4;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: var(--hover-btn-color);
+}
+
+.text-primary {
+  color: var(--text-primary);
+  font-weight: var(--bold-font);
+}
+
+/* navbar */
+
+#navbar {
+  border-bottom: #cccccc solid 2px;
+  width: 100vw;
+  max-height: 20vh;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#navbar .navbar-container {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+#navbar .navbar-container ul {
+  display: flex;
+  list-style: none;
+}
+#navbar .navbar-container ul li a {
+  padding: 0.75rem 0;
+  margin: 0 1.5rem;
+  position: relative;
+  letter-spacing: 2px;
+  transition: border 0.2s ease-in, background 0.2s ease-in;
+}
+#navbar .navbar-container ul li:last-child a {
+  margin-right: 0px;
+}
+
+#navbar .navbar-container ul li:first-child a {
+  margin-left: 0px;
+}
+
+/* #navbar .navbar-container ul li a:hover {
+  border-bottom: 0.3rem solid var(--main-btn-color);
+  border-top: 0.3rem solid var(--main-btn-color);
+} */
+
+#navbar .navbar-container ul li a::before,
+#navbar .navbar-container ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: crimson;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+#navbar .navbar-container ul li a::before {
+  top: 0;
+  transform-origin: left;
+}
+#navbar .navbar-container ul li a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+#navbar .navbar-container ul li a:hover::before,
+#navbar .navbar-container ul li a:hover::after {
+  transform: scaleX(1);
+}

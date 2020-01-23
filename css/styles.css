@@ -110,11 +110,11 @@ h3 {
 }
 
 .main-heading {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .main-paragraph {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 /* navbar */
@@ -191,12 +191,24 @@ h3 {
     no-repeat center center/cover;
   color: #f4f4f4;
   height: 100vh;
+  overflow: hidden;
 }
 
 #showcase .showcase-content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  border: solid red 3px;
+}
+#showcase .showcase-content .showcase-animation {
+  text-align: center;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 465ms ease-in 500ms, transform 568ms ease-in 500ms;
+}
+
+#showcase .showcase-content .showcase-animation.primary-transition {
+  opacity: 1;
+  transform: translateY(0%);
 }

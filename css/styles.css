@@ -2,9 +2,11 @@
 
 :root {
   --main-btn-color: #fa5e16;
-  --hover-btn-color: #071538;
+  --hover-btn-darker: #071538;
+  --hover-btn-lighter: #da5f26;
   --hover-snd-color: #43588d;
   --text-primary: #071538;
+  --text-secondary: #fa5e16;
   --bold-font: 700;
   --regular-font: 400;
   --light-font: 300;
@@ -26,7 +28,7 @@ a {
 }
 
 p {
-  margin: 0.75rem 0;
+  margin: 0.7rem 0;
 }
 
 h1,
@@ -48,7 +50,7 @@ h3 {
   transition: background 0.5s;
 }
 
-.btn-white {
+.btn-lighter {
   display: inline-block;
   padding: 0.5rem 2rem;
   background: var(--main-btn-color);
@@ -60,17 +62,32 @@ h3 {
 }
 
 .btn:hover {
-  background: var(--hover-btn-color);
+  background: var(--hover-btn-darker);
 }
 
-.btn-white:hover {
-  background: var(--hover-snd-color);
-  color: #fff;
+.btn-lighter:hover {
+  background: var(--hover-btn-lighter);
 }
 
 .text-primary {
   color: var(--text-primary);
   font-weight: var(--bold-font);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+  font-weight: var(--bold-font);
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: var(--text-primary);
 }
 
 .py-1 {
@@ -82,7 +99,7 @@ h3 {
 }
 
 .py-3 {
-  padding: 3rem 0;
+  padding: 6rem 0;
 }
 
 .p-1 {
@@ -128,15 +145,17 @@ h3 {
   top: 0;
   z-index: 1;
   background: #fff;
+  overflow: hidden;
 }
 
 #navbar .navbar-container {
   display: flex;
-  max-width: 80%;
+  max-width: 70%;
   margin: auto;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
+  overflow: hidden;
 }
 
 #navbar .navbar-container ul {
@@ -164,7 +183,7 @@ h3 {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: crimson;
+  background-color: var(--text-secondary);
   left: 0;
   transform: scaleX(0);
   transition: all 0.5s ease-in-out;
@@ -194,21 +213,81 @@ h3 {
   overflow: hidden;
 }
 
-#showcase .showcase-content {
+.main-heading {
+  line-height: 1;
+  font-weight: var(--light-font);
+}
+
+#showcase .container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   height: 100%;
-  border: solid red 3px;
 }
-#showcase .showcase-content .showcase-animation {
-  text-align: center;
+#showcase .container .showcase-animation {
+  text-align: left;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 465ms ease-in 500ms, transform 568ms ease-in 500ms;
 }
 
-#showcase .showcase-content .showcase-animation.primary-transition {
+#showcase .container .showcase-animation.primary-transition {
   opacity: 1;
   transform: translateY(0%);
+}
+
+/* What we do section */
+
+#what > .container {
+  display: flex;
+  height: 850px;
+}
+
+#what .img-container {
+  flex: 1;
+}
+#what .items {
+  height: 800px;
+  flex: 1;
+}
+
+#what .what-we-do-img {
+  height: auto;
+  box-shadow: 1.8rem 2rem 0px var(--text-secondary);
+}
+
+#what .items {
+  padding: 1rem 0px;
+  overflow-y: visible;
+}
+#what .items h3,
+#what .items svg {
+  padding: 0px;
+  margin: 0px 0px 10px;
+}
+#what .items p {
+  margin: 0px;
+  padding: 0px;
+}
+#what .items .items-1,
+#what .items .items-2,
+#what .items .items-3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25%;
+  overflow: visible;
+}
+#what .items .left-item,
+#what .items .right-item {
+  width: 50%;
+}
+
+#what .container .items svg {
+  color: var(--text-secondary);
+  font-size: 3rem;
+  transition: transform 462ms ease 0s;
+}
+
+#what .container .items .items-1 svg:hover {
+  transform: translateY(-20px);
 }

@@ -32,7 +32,7 @@ a {
 }
 
 p {
-  margin: 0.7rem 0;
+  /* margin: 0.7rem 0; */
 }
 
 h1,
@@ -84,7 +84,7 @@ h3 {
 }
 
 .container {
-  max-width: 70%;
+  max-width: 1100px;
   margin: auto;
   overflow: hidden;
 }
@@ -154,7 +154,7 @@ h3 {
 
 #navbar .navbar-container {
   display: flex;
-  max-width: 70%;
+  max-width: 1100px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
@@ -242,72 +242,55 @@ h3 {
 
 /* What we do section */
 
-#what > .container {
-  display: flex;
-  flex-wrap: wrap;
+#what-we-do-section > .container {
+  position: relative;
   overflow: visible;
 }
-#what .container .flexed1 {
-  /* flex: 1 1 calc(33.33% - 20px); */
-  /* border: 3px solid aqua; */
-  flex-basis: 50%;
-}
 
-#what .what-we-do-img {
-  height: auto;
-  box-shadow: 1.8rem 2rem 0px var(--text-secondary);
+#what-we-do-section .container .image-container {
+  position: absolute;
+  left: 0;
 }
-
-#what .items {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 2rem;
-  justify-content: space-between;
-  align-items: baseline;
-  /* border: 3px solid red; */
+#what-we-do-section .container .items-container {
+  position: absolute;
+  top: 0;
+  left: 52%;
+  padding-top: 10%;
 }
-
-#what .items .item {
-  flex: 1 1 50%;
-  /* background: aqua; */
-}
-
-#what .items .item-4 {
-  flex-shrink: 10;
-}
-
-/* #what .items {
-  padding: 1rem 0px;
-  overflow-y: visible;
-}
-#what .items h3,
-#what .items svg {
-  padding: 0px;
-  margin: 0px 0px 10px;
-}
-#what .items p {
-  margin: 0px;
-  padding: 0px;
-}
-#what .items .items-1,
-#what .items .items-2,
-#what .items .items-3 {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25%;
-  overflow: visible;
-}
-#what .items .left-item,
-#what .items .right-item {
-  width: 50%;
+/* #what-we-do-section .container .items-container .stitle h5,
+#what-we-do-section .container .items-container .stitle h2 {
+  position: absolute;
+  top: 0;
+  left: 62px;
 } */
 
-#what .container .items svg {
+#what-we-do-section .container .stitle {
+  display: flex;
+}
+#what-we-do-section .container .stitle .sheading {
+  padding-left: 1rem;
+}
+
+#what-we-do-section .container .stitle img {
+  width: 50px;
+  height: 50px;
+}
+#what-we-do-section .what-we-do-img {
+  height: auto;
+  box-shadow: 1.5rem 2rem 0px var(--text-secondary);
+}
+
+#what-we-do-section .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+#what-we-do-section .container .items svg {
   color: var(--text-secondary);
   font-size: 3rem;
   transition: transform 462ms ease 0s;
 }
 
-#what .container .items .items-1 svg:hover {
+#what-we-do-section .container .items svg:hover {
   transform: translateY(-20px);
 }

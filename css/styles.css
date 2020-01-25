@@ -130,12 +130,29 @@ h3 {
   margin-top: 3rem;
 }
 
-.main-heading {
-  font-size: 6rem;
+.l-heading {
+  font-size: 8rem;
+  letter-spacing: 8px;
 }
 
-.main-paragraph {
+.sl-heading {
+  font-size: 24px;
+  font-weight: var(--light-font);
+  color: var(--text-secondary);
+}
+
+.sl-heading-sub {
+  font-size: 2rem;
+}
+.sub-heading {
   font-size: 1.5rem;
+  font-weight: var(--regular-font);
+  padding-top: 10px;
+}
+
+.l-paragraph {
+  font-size: 1.4rem;
+  font-weight: var(--light-font);
 }
 
 /* navbar */
@@ -217,7 +234,7 @@ h3 {
   overflow: hidden;
 }
 
-.main-heading {
+.l-heading {
   line-height: 1;
   font-weight: var(--light-font);
 }
@@ -273,7 +290,9 @@ h3 {
 
 #what-we-do-section .container .stitle img {
   width: 50px;
-  height: 50px;
+  height: 67px;
+  display: inline-block;
+  padding-top: 0.4rem;
 }
 #what-we-do-section .what-we-do-img {
   height: auto;
@@ -284,6 +303,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  row-gap: 18px;
+  padding-top: 1.6rem;
 }
 #what-we-do-section .container .items svg {
   color: var(--text-secondary);

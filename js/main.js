@@ -1,26 +1,18 @@
-// const loadClass = () => {
-//   const heroBoxElem = document.querySelector('.showcase-animation');
-//   heroBoxElem.classList.add('primary-transition');
-// };
-
-// window.onload = loadClass;
-
-/**
- * Next lines will try the same as vanilla but with jQuery
- */
-
 $(document).ready(function() {
+  // herobox transition
   $('div.showcase-animation').addClass('primary-transition');
-  // $(window).scroll(function(e) {
-  //   console.log(this.scrollY);
-  // });
+
   $('#video-showcase .play-button button').on('click', function() {
     $(this).hide();
-    $('#video-showcase .video-player').addClass('active');
-    $('body').addClass('video-isActive');
+    $('body .video-player').addClass('toPlay');
+    $('#main-wrapper').addClass('isDimmed');
+    $('#overlay').addClass('isActive');
+  });
+
+  $('body .video-player .control .esc-video').on('click', function() {
+    $('body .video-player').removeClass('toPlay');
+    $('#main-wrapper').removeClass('isDimmed');
+    $('#overlay').removeClass('isActive');
+    $('#video-showcase .play-button button').show();
   });
 });
-// window.addEventListener('scroll', function(e) {
-//   // console.log(e);
-//   console.log(this.scrollY);
-// });

@@ -41,7 +41,7 @@ h3 {
   padding-bottom: 1.2rem;
 }
 
-/* Utility classes */
+/*----------------------- Utility classes ------------------ */
 
 .btn {
   display: inline-block;
@@ -155,7 +155,21 @@ h3 {
   font-weight: var(--light-font);
 }
 
-/* navbar */
+.stitle-module {
+  display: flex;
+}
+
+.stitle-module > .headings {
+  padding-left: 1rem;
+}
+
+img.thumb {
+  width: 50px;
+  height: 67px;
+  padding-top: 0.4rem;
+}
+
+/*---------------------------------- navbar -------------------------*/
 
 #navbar {
   border-bottom: #cccccc solid 2px;
@@ -224,7 +238,7 @@ h3 {
   transform: scaleX(1);
 }
 
-/* showcase */
+/*-------------------------------- showcase -------------------------- */
 
 #showcase {
   background: url(../img/assets/monochrome-photography-of-people-shaking-hands-814544.jpg)
@@ -257,7 +271,11 @@ h3 {
   transform: translateY(0%);
 }
 
-/* What we do section */
+/*-------------------------------- What we do section ----------------*/
+
+#what-we-do-section {
+  background: #fff;
+}
 
 #what-we-do-section > .container {
   position: relative;
@@ -274,12 +292,6 @@ h3 {
   left: 52%;
   padding-top: 10%;
 }
-/* #what-we-do-section .container .items-container .stitle h5,
-#what-we-do-section .container .items-container .stitle h2 {
-  position: absolute;
-  top: 0;
-  left: 62px;
-} */
 
 #what-we-do-section .container .stitle {
   display: flex;
@@ -288,13 +300,6 @@ h3 {
   padding-left: 1rem;
 }
 
-#what-we-do-section .container .stitle img,
-#video-showcase .container .stitle img {
-  width: 50px;
-  height: 67px;
-  display: inline-block;
-  padding-top: 0.4rem;
-}
 #what-we-do-section .what-we-do-img {
   height: auto;
   box-shadow: 1.5rem 2rem 0px var(--text-secondary);
@@ -317,13 +322,16 @@ h3 {
   transform: translateY(-20px);
 }
 
-/* video-showcase-section */
+/*-------------------------- video-showcase-section --------------------- */
 
 #video-showcase {
   background: #e1e1e1;
   margin-top: 6rem;
   position: relative;
   padding: 96px 0 87px;
+}
+#video-showcase .container .why-choose-us-area .stitle {
+  display: flex;
 }
 
 #video-showcase .why-choose-us-bg-img {
@@ -335,25 +343,57 @@ h3 {
   overflow: hidden;
 }
 
-#video-showcase .video-player {
-  position: absolute;
+/* videoPlayer not visible   */
+body > .video-player {
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   opacity: 0;
-  transition: opacity 1s ease-in 0s;
+  transition: opacity 500ms ease-in 0s;
+  z-index: 1;
+}
+body > .video-player.toPlay {
+  opacity: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 998;
+}
+/* video player control esc functionality */
+
+body > .video-player .control {
+  position: relative;
 }
 
-#video-showcase .video-player.active {
-  opacity: 1;
+body > .video-player .control .esc-video {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  color: #fff;
+  cursor: pointer;
 }
+
+#overlay.isActive {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+/* end video is played */
 
 #video-showcase .play-button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
 #video-showcase .play-button button {
@@ -364,10 +404,6 @@ h3 {
   cursor: pointer;
   outline: none;
   position: relative;
-
-  /* width: 150%;
-  height: 200%; */
-  /* display: none; */
 }
 
 #video-showcase .play-button button::before {
@@ -389,13 +425,6 @@ h3 {
   display: inline-block;
 }
 
-body.video-isActive {
-  opacity: 0;
-}
-/* 
-#video-showcase .container {
-  border: aqua solid 4px;
-} */
 #video-showcase .container p {
   width: 40%;
 }
@@ -406,7 +435,7 @@ body.video-isActive {
 
 #video-showcase .ceo-signature-area .ceo-name,
 #video-showcase .ceo-signature-area .ceo-role {
-  padding: 5px 0px;
+  padding: 2px 0px;
 }
 
 #video-showcase .ceo-signature-area .ceo-name {
@@ -429,6 +458,5 @@ body.video-isActive {
     opacity: 0;
     width: 200%;
     height: 200%;
-    transform-origin: 10;
   }
 }

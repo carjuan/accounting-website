@@ -70,6 +70,7 @@
         <div class="items-container">
           <div class="stitle">
             <img
+              class="thumb"
               src="http://pluginspoint.com/dustrialwp/wp-content/uploads/2019/01/title-icon-1-2.png"
               alt="title icon"
             />
@@ -145,12 +146,13 @@
       </div>
       <div class="container">
         <div class="why-choose-us-area">
-          <div class="stitle">
+          <div class="stitle-module">
             <img
+              class="thumb"
               src="http://pluginspoint.com/dustrialwp/wp-content/uploads/2019/01/title-icon-1-2.png"
               alt="title icon"
             />
-            <div class="sheading">
+            <div class="headings">
               <h5 class="sl-heading">Why?</h5>
               <h2 class="sl-heading-sub">Use the right tools</h2>
             </div>
@@ -168,8 +170,16 @@
           </div>
         </div>
       </div>
+      <div class="play-button">
+        <button><i class="fas fa-play"></i></button>
+      </div>
+    </section>
 
-      <div class="video-player">
+    <!-- video is active once video-showcase section button is clicked -->
+    <!-- TODO: getting to append the following elements dynamically -->
+    <div id="overlay"></div>
+    <div class="video-player">
+      <div class="control">
         <iframe
           src="https://player.vimeo.com/video/46065546"
           width="800"
@@ -178,10 +188,10 @@
           allow="autoplay; fullscreen"
           allowfullscreen
         ></iframe>
+        <div class="esc-video">X</div>
       </div>
-      <div class="play-button">
-        <button><i class="fas fa-play"></i></button>
-      </div>
-    </section>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="js/vimeo_player.js"></script>
   </body>
 </html>

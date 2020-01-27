@@ -31,9 +31,9 @@ a {
   text-decoration: none;
 }
 
-p {
-  /* margin: 0.7rem 0; */
-}
+/* p {
+  margin: 0.7rem 0;
+} */
 
 h1,
 h2,
@@ -288,7 +288,8 @@ h3 {
   padding-left: 1rem;
 }
 
-#what-we-do-section .container .stitle img {
+#what-we-do-section .container .stitle img,
+#video-showcase .container .stitle img {
   width: 50px;
   height: 67px;
   display: inline-block;
@@ -314,4 +315,120 @@ h3 {
 
 #what-we-do-section .container .items svg:hover {
   transform: translateY(-20px);
+}
+
+/* video-showcase-section */
+
+#video-showcase {
+  background: #e1e1e1;
+  margin-top: 6rem;
+  position: relative;
+  padding: 96px 0 87px;
+}
+
+#video-showcase .why-choose-us-bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+#video-showcase .video-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: opacity 1s ease-in 0s;
+}
+
+#video-showcase .video-player.active {
+  opacity: 1;
+}
+
+#video-showcase .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#video-showcase .play-button button {
+  background: var(--text-secondary);
+  padding: 2rem 2rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+
+  /* width: 150%;
+  height: 200%; */
+  /* display: none; */
+}
+
+#video-showcase .play-button button::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--text-secondary);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+#video-showcase .play-button svg {
+  color: #fff;
+  font-size: 4rem;
+  display: inline-block;
+}
+
+body.video-isActive {
+  opacity: 0;
+}
+/* 
+#video-showcase .container {
+  border: aqua solid 4px;
+} */
+#video-showcase .container p {
+  width: 40%;
+}
+
+#video-showcase > .container .ceo-signature-area {
+  margin: 4% 0px 0px;
+}
+
+#video-showcase .ceo-signature-area .ceo-name,
+#video-showcase .ceo-signature-area .ceo-role {
+  padding: 5px 0px;
+}
+
+#video-showcase .ceo-signature-area .ceo-name {
+  font-size: 1.5rem;
+  font-weight: var(--light-font);
+}
+
+#video-showcase .ceo-signature-area .ceo-role {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* animations */
+
+@keyframes pulse-border {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+    transform-origin: 10;
+  }
 }

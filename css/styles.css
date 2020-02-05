@@ -344,7 +344,7 @@ img.thumb {
 }
 
 /* videoPlayer not visible   */
-body > .video-player {
+body .video-player {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -353,7 +353,7 @@ body > .video-player {
   transition: opacity 500ms ease-in 0s;
   z-index: 1;
 }
-body > .video-player.toPlay {
+body .video-player.toPlay {
   opacity: 1;
   position: fixed;
   top: 50%;
@@ -362,11 +362,11 @@ body > .video-player.toPlay {
 }
 /* video player control esc functionality */
 
-body > .video-player .control {
+body .video-player .control {
   position: relative;
 }
 
-body > .video-player .control .esc-video {
+body .video-player .control .esc-video {
   position: absolute;
   top: 10%;
   right: 0;
@@ -374,7 +374,7 @@ body > .video-player .control .esc-video {
   cursor: pointer;
 }
 
-#overlay.isActive {
+#overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -447,6 +447,8 @@ body > .video-player .control .esc-video {
   color: var(--text-secondary);
   font-size: 1rem;
 }
+
+/* -----------------get-started-section---------------------- */
 
 /* animations */
 

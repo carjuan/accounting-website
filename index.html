@@ -20,6 +20,12 @@
       media="screen and (min-width: 1100px)"
       href="css/widescreen.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+      type="text/css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
@@ -37,8 +43,9 @@
         /></a>
         <ul>
           <li><a class="text-primary" href="#home">Home</a></li>
-          <li><a class="text-primary" href="#what">What</a></li>
-          <li><a class="text-primary" href="#who">Who</a></li>
+          <li><a class="text-primary" href="#help">Get started</a></li>
+          <li><a class="text-primary" href="#what">What we do</a></li>
+          <li><a class="text-primary" href="#who">Who we are</a></li>
         </ul>
         <a class="btn" href="contact.html">Contact us</a>
       </div>
@@ -60,14 +67,14 @@
     <!-- section: wha we do  -->
     <section id="what-we-do-section" class="py-3">
       <div class="container">
-        <div class="img-container flexed1">
+        <div class="wow fadeInLeft img-container flexed1">
           <img
             class="what-we-do-img"
             src="img/assets/photo-of-people-sitting-beside-table-3182755.jpg"
             alt="people working"
           />
         </div>
-        <div class="items-container">
+        <div class="wow fadeInRight items-container">
           <div class="stitle">
             <img
               class="thumb"
@@ -76,7 +83,7 @@
             />
             <div class="sheading">
               <h5 class="sl-heading">Welcome to</h5>
-              <h2 class="sl-heading-sub">OUR CORE VALUES</h2>
+              <h2 class="sl-heading-sub">WHAT WE DO</h2>
             </div>
           </div>
 
@@ -154,7 +161,7 @@
             />
             <div class="headings">
               <h5 class="sl-heading">Why?</h5>
-              <h2 class="sl-heading-sub">Use the right tools</h2>
+              <h2 class="sl-heading-sub">Financing matters</h2>
             </div>
           </div>
           <p>
@@ -174,24 +181,28 @@
         <button><i class="fas fa-play"></i></button>
       </div>
     </section>
-
-    <!-- video is active once video-showcase section button is clicked -->
-    <!-- TODO: getting to append the following elements dynamically -->
-    <div id="overlay"></div>
-    <div class="video-player">
-      <div class="control">
-        <iframe
-          src="https://player.vimeo.com/video/46065546"
-          width="800"
-          height="500"
-          frameborder="0"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-        ></iframe>
-        <div class="esc-video">X</div>
+    <section id="get-started">
+      <div class="container">
+        <div class="help-list-items">
+          <h2 class="sl-heading-sub">Get help with</h2>
+          <ul>
+            <li>Bookkeeping</li>
+            <li>Invoicing</li>
+            <li>Debt management</li>
+            <li>Monthly, quarterly and annual reports</li>
+            <li>Payroll administrations</li>
+          </ul>
+          <p>And more...</p>
+        </div>
+        <div class="help-list-img">
+          <img
+            src="./img/assets/full-length-portrait-of-man-standing-in-corridor-325685.jpg"
+            alt="man standing in corridor"
+          />
+        </div>
       </div>
-    </div>
+    </section>
+
     <script src="https://player.vimeo.com/api/player.js"></script>
-    <script src="js/vimeo_player.js"></script>
   </body>
 </html>

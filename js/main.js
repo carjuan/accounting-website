@@ -1,18 +1,44 @@
+new WOW().init();
+
 $(document).ready(function() {
+  const videoPlayerTemplate = `
+  <div class="video-player-wrapper">
+    <div id="overlay"></div>
+    <div class="video-player toPlay">
+      <div class="control">
+        <iframe
+          src="https://player.vimeo.com/video/46065546"
+          width="800"
+          height="500"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div class="esc-video">X</div>
+      </div>
+    </div>
+  </div`;
   // herobox transition
   $('div.showcase-animation').addClass('primary-transition');
 
+  // video-player clicked transition
   $('#video-showcase .play-button button').on('click', function() {
     $(this).hide();
-    $('body .video-player').addClass('toPlay');
-    $('#main-wrapper').addClass('isDimmed');
-    $('#overlay').addClass('isActive');
-  });
+    $(videoPlayerTemplate).appendTo('body');
 
-  $('body .video-player .control .esc-video').on('click', function() {
-    $('body .video-player').removeClass('toPlay');
-    $('#main-wrapper').removeClass('isDimmed');
-    $('#overlay').removeClass('isActive');
-    $('#video-showcase .play-button button').show();
+    /**
+     *
+     * Vimeo player object creation
+     * jQuery object returns an array-like object of selected elements
+     *
+     */
+    const iframe = $('iframe')[0];
+    const videoPLayer = new Vimeo.Player(iframe);
+    videoPLayer.play();
+
+    // adding the esc control event
+    $('body .video-player .control .esc-video').on('click', function() {
+      $('#video-showcase .play-button button').show();
+      $('.video-player-wrapper').remove();
+    });
   });
 });

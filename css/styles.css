@@ -41,6 +41,11 @@ h3 {
   padding-bottom: 1.2rem;
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
 /*----------------------- Utility classes ------------------ */
 
 .btn {
@@ -52,6 +57,7 @@ h3 {
   border-radius: 4px;
   font-size: 1.2rem;
   transition: background 0.5s;
+  text-transform: uppercase;
 }
 
 .btn-lighter {
@@ -128,6 +134,14 @@ h3 {
 
 .mt-3 {
   margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-5 {
+  margin-top: 7rem;
 }
 
 .l-heading {
@@ -293,13 +307,6 @@ img.thumb {
   padding-top: 10%;
 }
 
-#what-we-do-section .container .stitle {
-  display: flex;
-}
-#what-we-do-section .container .stitle .sheading {
-  padding-left: 1rem;
-}
-
 #what-we-do-section .what-we-do-img {
   height: auto;
   box-shadow: 1.5rem 2rem 0px var(--text-secondary);
@@ -393,7 +400,6 @@ body .video-player .control .esc-video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
 }
 
 #video-showcase .play-button button {
@@ -449,6 +455,41 @@ body .video-player .control .esc-video {
 }
 
 /* -----------------get-started-section---------------------- */
+
+#get-started > .container {
+  display: flex;
+  justify-content: space-around;
+  overflow: visible;
+}
+
+#get-started .help-list-items {
+  align-self: center;
+}
+#get-started .stitle {
+  display: flex;
+}
+
+#get-started li {
+  padding: 5px 0px;
+  padding-left: 25px;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: visible;
+}
+
+#get-started li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(-150%, -50%);
+  width: 4%;
+  height: 40%;
+  background: var(--text-secondary);
+}
+
+#get-started .help-list-img img {
+  box-shadow: 1.5rem 2rem 0px var(--text-secondary);
+}
 
 /* animations */
 

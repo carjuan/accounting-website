@@ -89,6 +89,10 @@ ol {
   font-weight: var(--bold-font);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .container {
   max-width: 1100px;
   margin: auto;
@@ -529,6 +533,7 @@ body .video-player .control .esc-video {
 #clients .container {
   display: flex;
   flex-wrap: wrap;
+  overflow: visible;
 }
 
 #clients .container > .stitle-module {
@@ -553,6 +558,58 @@ body .video-player .control .esc-video {
   width: 90%;
 }
 
+/* --------------------main-footer------------------- */
+#main-footer {
+  background: url(../img/assets/dot-grid.png) no-repeat center center/cover;
+  position: relative;
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+#main-footer::after {
+  position: absolute;
+  content: '';
+  width: 20%;
+  height: 140%;
+  background: var(--text-primary);
+  right: -16%;
+  top: 0;
+  transform: rotate(30deg);
+}
+
+#main-footer > .footer-overlay {
+  background: #e9eff2a8;
+}
+
+#main-footer .footer {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  margin: auto;
+}
+
+#main-footer .navigation .footer-nav-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main-footer .navigation .footer-nav-items .item {
+  flex: 0 0 50%;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  line-height: 2em;
+}
+
+#main-footer .navigation .footer-nav-items .item:last-child {
+  flex: 0 0 100%;
+}
+
+#main-footer .copyright {
+  border-top: 4px var(--text-primary) solid;
+  padding: 2rem 0px 0px;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
 /* animations */
 
 @keyframes pulse-border {

@@ -532,10 +532,10 @@ body .video-player .control .esc-video {
 }
 
 #clients .container > .stitle-module {
-  flex: 2 0 10%;
+  flex: 2 0 5%;
 }
 #clients .container > .items {
-  flex: 1;
+  flex: 1 0;
 }
 
 #clients .items {

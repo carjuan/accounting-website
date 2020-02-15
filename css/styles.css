@@ -22,6 +22,11 @@
   box-sizing: border-box;
 }
 
+/* Not supported by all browser */
+/* html {
+  scroll-behavior: smooth;
+} */
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
@@ -30,10 +35,6 @@ body {
 a {
   text-decoration: none;
 }
-
-/* p {
-  margin: 0.7rem 0;
-} */
 
 h1,
 h2,
@@ -54,7 +55,7 @@ ol {
   background: var(--main-btn-color);
   border: none;
   color: #f4f4f4;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: background 0.5s;
   text-transform: uppercase;
   position: relative;
@@ -201,15 +202,21 @@ img.thumb {
 /*---------------------------------- navbar -------------------------*/
 
 #navbar {
-  border-bottom: #cccccc solid 2px;
-  max-height: 20vh;
-  font-size: 1.2rem;
+  min-height: 10vh;
+  width: 100vw;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background: #fff;
   overflow: hidden;
+  transition: min-height 500ms 0s;
+}
+
+#navbar.sticky {
+  min-height: 8vh;
+  box-shadow: 0px 3px 5px 5px rgba(63, 62, 62, 0.3);
 }
 
 #navbar .navbar-container {
@@ -220,6 +227,7 @@ img.thumb {
   align-items: center;
   padding: 0.75rem 0;
   overflow: hidden;
+  min-height: inherit;
 }
 
 #navbar .navbar-container ul {
@@ -231,7 +239,6 @@ img.thumb {
   margin: 0 1.5rem;
   position: relative;
   letter-spacing: 2px;
-  transition: border 0.2s ease-in, background 0.2s ease-in;
 }
 #navbar .navbar-container ul li:last-child a {
   margin-right: 0px;
@@ -250,7 +257,7 @@ img.thumb {
   background-color: var(--text-secondary);
   left: 0;
   transform: scaleX(0);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 #navbar .navbar-container ul li a::before {
@@ -268,12 +275,15 @@ img.thumb {
 }
 
 /*-------------------------------- showcase -------------------------- */
+main {
+  margin-top: 9vh;
+}
 
 #showcase {
   background: url(../img/assets/monochrome-photography-of-people-shaking-hands-814544.jpg)
     no-repeat center center/cover;
   color: #f4f4f4;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -284,9 +294,8 @@ img.thumb {
 
 #showcase .container {
   display: flex;
-  justify-content: left;
   align-items: center;
-  height: 100%;
+  min-height: inherit;
 }
 #showcase .container .showcase-animation {
   text-align: left;

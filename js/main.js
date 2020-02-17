@@ -22,6 +22,18 @@ const checkNavbar = _.throttle(e => {
 
 window.addEventListener('scroll', checkNavbar);
 
+// Javascript map API
+function initMap() {
+  // element to display map
+  const mapElement = document.querySelector('.map');
+  // Business location
+  const loc = { lat: 49.900501, lng: -97.139313 };
+  // centered map on location
+  const map = new google.maps.Map(mapElement, { zoom: 14, center: loc });
+  // The marker, positioned at location
+  const marker = new google.maps.Marker({ position: loc, map: map });
+}
+
 $(document).ready(function() {
   // herobox transition
   $('div.showcase-animation').addClass('primary-transition');

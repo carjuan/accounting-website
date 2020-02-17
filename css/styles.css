@@ -14,11 +14,15 @@
 
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -107,6 +111,14 @@ ol {
   color: var(--text-primary);
 }
 
+.p-top-1 {
+  padding-top: 30px;
+}
+
+.p-top-2 {
+  padding-top: 50px;
+}
+
 .py-1 {
   padding: 1.5rem 0;
 }
@@ -151,8 +163,28 @@ ol {
   margin-top: 7rem;
 }
 
+.mb-1 {
+  margin-bottom: 5px;
+}
+
+.mb-2 {
+  margin-bottom: 10px;
+}
+
 .mt-6 {
   margin-top: 10rem;
+}
+
+.ls-1 {
+  letter-spacing: 2px;
+}
+
+.ls-2 {
+  letter-spacing: 4px;
+}
+
+.primary-color {
+  color: var(--text-primary);
 }
 
 .l-heading {
@@ -208,7 +240,7 @@ img.thumb {
   text-transform: uppercase;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   background: #fff;
   overflow: hidden;
   transition: min-height 500ms 0s;
@@ -320,10 +352,6 @@ main {
   overflow: visible;
 }
 
-#what-we-do-section .container .image-container {
-  position: absolute;
-  left: 0;
-}
 #what-we-do-section .container .items-container {
   position: absolute;
   top: 0;
@@ -574,7 +602,6 @@ body .video-player .control .esc-video {
   background: url(../img/assets/dot-grid.png) no-repeat center center/cover;
   position: relative;
   color: var(--text-primary);
-  position: relative;
   overflow: hidden;
 }
 
@@ -651,9 +678,94 @@ body .video-player .control .esc-video {
 #main-footer .copyright {
   border-top: 4px var(--text-primary) solid;
   padding: 2rem 0px 0px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
 }
+
+/* Contact page */
+
+.contact-form > .container {
+  position: relative;
+  height: 80vh;
+  z-index: 1;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.white-bg-box {
+  position: relative;
+  min-height: 35%;
+  width: 100%;
+  z-index: 2;
+  background: white;
+}
+
+.grey-bg-box {
+  position: relative;
+  min-height: 50%;
+  width: 100%;
+  z-index: 2;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23fa5e16' fill-opacity='0.5'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* #f3f0ed */
+
+.contact-us {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 40%;
+}
+
+.contact-us .form-group {
+  width: 100%;
+  height: 30px;
+}
+
+.contact-us .form-group:last-child {
+  min-height: 150px;
+}
+
+.contact-us .form-group input,
+.contact-us .form-group select,
+.contact-us .form-group textarea {
+  width: 100%;
+  height: 100%;
+  border: rgba(190, 190, 190, 0.548) 2px solid;
+}
+.contact-us .form-group input,
+.contact-us .form-group textarea {
+  padding-left: 5px;
+}
+
+.contact-us .form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* hides the default seleect arrow */
+  appearance: none;
+  background: url(../img/assets/bxs-down-arrow.svg) 98% 50% no-repeat;
+  color: grey;
+}
+
+.contact-us button {
+  position: relative;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.location-info > .container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.location-info .map {
+  height: 500px;
+}
+
 /* animations */
 
 @keyframes pulse-border {

@@ -1,0 +1,55 @@
+:root {
+  --main-btn-color: #fa5e16;
+  --hover-btn-darker: #071538;
+  --hover-btn-lighter: #da5f26;
+  --hover-snd-color: #43588d;
+  --text-primary: #071538;
+  --text-secondary: #fa5e16;
+  --bold-font: 700;
+  --regular-font: 400;
+  --light-font: 300;
+}
+
+html {
+  font-size: 14px;
+}
+/* Navbar */
+
+#navbar .navbar-container {
+  flex-direction: column;
+}
+
+#navbar .btn {
+  display: none;
+}
+
+#showcase .container .showcase-animation {
+  text-align: center;
+}
+
+.l-heading {
+  font-size: 6rem;
+}
+
+/* what we do section */
+
+#what-we-do-section > .container .img-container {
+  display: none;
+}
+
+#what-we-do-section .container .items-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+}
+
+/* video showcase */
+
+#video-showcase {
+  padding: 20px 30px;
+}
+
+#video-showcase .why-choose-us-bg-img {
+  display: none;
+}

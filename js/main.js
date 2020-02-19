@@ -53,6 +53,12 @@ $(document).ready(function() {
     }
   });
 
+  //hamburguer menu toggle
+  $('.hamburguer-btn').click(function() {
+    $('.nav-main').toggleClass('nav-main--open');
+    $('.nav-toggle__link').toggleClass('nav-toggle__link--hidden');
+  });
+
   // video-player clicked transition
   $('#video-showcase .play-button button').on('click', function() {
     $(this).hide();
